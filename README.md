@@ -26,16 +26,16 @@
   - プロフィールの編集と写真投稿は本人のみ実行可能
 
 ### カタログ設計
-[text](https://docs.google.com/spreadsheets/d/e/2PACX-1vSF5ivFNZxO9YQVCjJQ6acr5bQph0aaO_hMMxvbZhkxXE-TXAJkkw29rLfE1GpaqnAhKWPMWJvJjqNS/pubhtml)
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSF5ivFNZxO9YQVCjJQ6acr5bQph0aaO_hMMxvbZhkxXE-TXAJkkw29rLfE1GpaqnAhKWPMWJvJjqNS/pubhtml
 
 ### テーブル定義
-[text](https://docs.google.com/spreadsheets/d/e/2PACX-1vS_ACLtEvOeV5n2NZQF0opmhs-OuA4ZstdiyXnQcw02jc7pFC7vJHgrer5GIXe_80oHHebBWrvLq5Ti/pubhtml)
+https://docs.google.com/spreadsheets/d/e/2PACX-1vS_ACLtEvOeV5n2NZQF0opmhs-OuA4ZstdiyXnQcw02jc7pFC7vJHgrer5GIXe_80oHHebBWrvLq5Ti/pubhtml
 
 ### 画面遷移図
-[text](https://docs.google.com/spreadsheets/d/e/2PACX-1vS5wnLcO0ynHtQ5fPp7YWh65DxLzXEMHPgA_q5Fb1QiShLjdMsenWhhQAbnZZubOjYEMZCZ0WVzcth0/pubhtml)
+https://docs.google.com/spreadsheets/d/e/2PACX-1vS5wnLcO0ynHtQ5fPp7YWh65DxLzXEMHPgA_q5Fb1QiShLjdMsenWhhQAbnZZubOjYEMZCZ0WVzcth0/pubhtml
 
 ### 画面ワイヤーフレーム
-[text](https://docs.google.com/spreadsheets/d/e/2PACX-1vSfSafXOSeTGYgJ4B4ISL2i_AXLgRUulDeERadSF8v9njB3-51YefoDmrLTKolErOdBSeERd2WyYRVD/pubhtml)
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSfSafXOSeTGYgJ4B4ISL2i_AXLgRUulDeERadSF8v9njB3-51YefoDmrLTKolErOdBSeERd2WyYRVD/pubhtml
 
 
 ### 使用予定gem
