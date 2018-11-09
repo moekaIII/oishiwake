@@ -37,7 +37,6 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vS_ACLtEvOeV5n2NZQF0opmhs-OuA4Zs
 
 ### 画面遷移図
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSPbVmtJ4oOP3RHstoIOmznZFf7teRo8iiPJcE2-x-6RyFjepZSuVZt4_saM6-qdoK3yVFw_l4ZtmSQ/pubhtml
-
 ### 画面ワイヤーフレーム
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSfSafXOSeTGYgJ4B4ISL2i_AXLgRUulDeERadSF8v9njB3-51YefoDmrLTKolErOdBSeERd2WyYRVD/pubhtml
 
