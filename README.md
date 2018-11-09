@@ -3,10 +3,10 @@
 ### 概要
 手料理を食べたい人と、料理好きな人を繋ぎます
 ### コンセプト
-『美味しい』を気軽にお届け
+『美味しい』を誰でも気軽にお届け
 
 ### バージョン
-ruby 2.5.0
+ruby 2.5.0　　
 rails 5.2.1
 
 ### 機能一覧
@@ -36,7 +36,7 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vSF5ivFNZxO9YQVCjJQ6acr5bQph0aaO
 https://docs.google.com/spreadsheets/d/e/2PACX-1vS_ACLtEvOeV5n2NZQF0opmhs-OuA4ZstdiyXnQcw02jc7pFC7vJHgrer5GIXe_80oHHebBWrvLq5Ti/pubhtml
 
 ### 画面遷移図
-https://docs.google.com/spreadsheets/d/e/2PACX-1vS5wnLcO0ynHtQ5fPp7YWh65DxLzXEMHPgA_q5Fb1QiShLjdMsenWhhQAbnZZubOjYEMZCZ0WVzcth0/pubhtml
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSPbVmtJ4oOP3RHstoIOmznZFf7teRo8iiPJcE2-x-6RyFjepZSuVZt4_saM6-qdoK3yVFw_l4ZtmSQ/pubhtml
 
 ### 画面ワイヤーフレーム
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSfSafXOSeTGYgJ4B4ISL2i_AXLgRUulDeERadSF8v9njB3-51YefoDmrLTKolErOdBSeERd2WyYRVD/pubhtml
