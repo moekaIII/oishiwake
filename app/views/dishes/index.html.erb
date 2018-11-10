@@ -1,0 +1,22 @@
+<p>検索 🔍</p>
+
+<h1>投稿一覧</h1>
+
+<p>
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+</p>
+
+<p>
+<% @dishes.each do |dish| %>
+<ul>
+  <li><h3><%= dish.name %></h3></li>
+  <li>地域：</li>
+  <li>募集期間：<%= dish.time %></li>
+  <li>チップ：<%= dish.tip %>円〜</li>
+</ul>
+<%= link_to '詳細', dish_path(dish.id) %>
+<%= link_to '削除', dish_path(dish.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
+<% end %>
+</p>

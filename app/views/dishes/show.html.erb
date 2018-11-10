@@ -1,0 +1,12 @@
+<h1><%= @dish.name %></h1>
+
+<h4>地域：</h4>
+<h4>募集期間：<%= @dish.time %></h4>
+<h4>チップ：<%= @dish.tip %>円〜</h4>
+........................................
+<h4>コメント</h4>
+<p><%= @dish.comment %></p>
+
+<%= link_to '編集', edit_dish_path %>
+
+<%= link_to '戻る', dishes_path %>
