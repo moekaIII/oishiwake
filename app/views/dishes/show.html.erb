@@ -1,12 +1,23 @@
+<p><%= @dish.user.name %>さんの投稿</p>
 <h1><%= @dish.name %></h1>
-
-<h4>地域：</h4>
+<h4>地域：<%= @dish.user.place %></h4>
 <h4>募集期間：<%= @dish.time %></h4>
 <h4>チップ：<%= @dish.tip %>円〜</h4>
 ........................................
 <h4>コメント</h4>
 <p><%= @dish.comment %></p>
 
-<%= link_to '編集', edit_dish_path %>
+<% unless @dish.user_id == current_user.id %>
+  <% if @favorite.present? %>
+    <%= link_to 'キャンセル', favorite_path(id: @favorite.id), method: :delete %>
+  <% else %>
+    <%= link_to '挙手', favorites_path(dish_id: @dish.id), method: :post %>
+  <% end %>
+<% end %>
+
+<% if @dish.user_id == current_user.id %>
+  <%= link_to '編集', edit_dish_path(@dish.id) %>
+  <%= link_to '削除', dish_path(@dish.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
+<% end %>
 
 <%= link_to '戻る', dishes_path %>

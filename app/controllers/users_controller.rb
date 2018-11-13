@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only:[:show, :pdate]
   def new
     @user = User.new
   end
@@ -22,4 +23,7 @@ private
     params.require(:user).permit(:name, :email, :place, :password, :password_confirmation, :icon, :about_me, :image, :comment)
   end
 
+  def set_user
+    @user = User.find(params[:id])
+  end
 end
