@@ -26,8 +26,11 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 
-  <%= f.label :icon %>
-  <%= f.password_field :icon %>
+  <%= f.label :about_me %>
+  <%= f.text_area :about_me %>
 
-  <%= f.submit "登録" %>
+  <%= f.label :icon %>
+  <%= f.file_field :icon %>
+
+  <%= f.submit '登録' %>
 <% end %>
