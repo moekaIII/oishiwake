@@ -1,4 +1,4 @@
 <h1><%= image_tag @user.icon.url %><%= @user.name %>さんのページ</h1>
-<p><%= @user.place %></p>
-
+<p>地域：<%= @user.place %></p>
+<p><%= @user.about_me %></p>
 <%= link_to '編集', edit_user_path(@user.id) %>
