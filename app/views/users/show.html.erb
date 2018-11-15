@@ -1,5 +1,6 @@
 <h1><%= image_tag @user.icon.url %><%= @user.name %>さんのページ</h1>
 <p>地域：<%= @user.place %></p>
 <p><%= @user.about_me %></p>
+<p><%= link_to 'メッセージ', users_path %></p>
 <p>過去の料理一覧</p>
 <%= link_to '編集', edit_user_path(@user.id) %>

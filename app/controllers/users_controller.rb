@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only:[:show, :pdate]
   before_action :user_check, only:[:edit]
+  def index
+    @users = User.all
+  end
+  
   def new
     @user = User.new
   end
