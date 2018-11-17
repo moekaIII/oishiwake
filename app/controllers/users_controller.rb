@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
-  
+
   def new
     @user = User.new
   end
@@ -20,10 +20,18 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @images = Image.all
   end
 
   def edit
   end
+
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    redirect_to user_path(current_user.id), notice: "写真を削除しました！"
+  end
+
 
   def update
     @user = User.find(params[:id])
@@ -37,7 +45,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:name, :email, :place, :password, :password_confirmation, :icon, :about_me, :image, :comment)
+    params.require(:user).permit(:name, :email, :place, :password, :password_confirmation, :icon, :about_me, :comment)
   end
 
   def set_user

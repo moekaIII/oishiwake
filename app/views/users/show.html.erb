@@ -2,5 +2,12 @@
 <p>地域：<%= @user.place %></p>
 <p><%= @user.about_me %></p>
 <p><%= link_to 'メッセージ', users_path %></p>
-<p>過去の料理一覧</p>
 <%= link_to '編集', edit_user_path(@user.id) %>
+<p>過去の料理一覧</p>
+<p>
+  <% @images.each do |img| %>
+    <li><%= image_tag img.image.url %></li>
+    <%= link_to '削除', user_path(img.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
+  <% end %>
+</p>
+<%= link_to '追加', new_image_path %>
