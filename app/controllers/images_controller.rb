@@ -1,5 +1,4 @@
 class ImagesController < ApplicationController
-  before_action :set_image, only: [:destry]
   def new
     @image = Image.new
   end
@@ -19,10 +18,6 @@ class ImagesController < ApplicationController
 
   def image_params
     params.require(:image).permit(:image)
-  end
-
-  def set_image
-    @image = Image.find(params[:id])
   end
 
 end

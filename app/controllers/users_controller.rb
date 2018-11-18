@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only:[:show, :pdate]
+  before_action :set_user, only:[:show, :pdate, :index]
   before_action :user_check, only:[:edit]
   def index
     @users = User.all
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @images = Image.all
+    @images = @user.images
   end
 
   def edit
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:name, :email, :place, :password, :password_confirmation, :icon, :about_me, :comment)
+    params.require(:user).permit(:name, :email, :place, :password, :password_confirmation, :icon, :about_me, :comment, :image)
   end
 
   def set_user
