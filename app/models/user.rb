@@ -1,14 +1,15 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable, :confirmable
+
   validates :name, length:{ maximum: 30 }
-  validates :email, length:{ maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
-  validates :password, length:{ maximum: 255 }
-  validates :place, length:{ in: 1..255 }
   validates :icon, presence: true
-  before_validation { email.downcase! }
-  has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
-  has_many :dishes
-  has_many :favorites, dependent: :destroy
+  validates :place, length:{ in: 1..255 }
+  validates :about_me, length:{ maximum: 140 }
   has_many :images, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :dishes
   mount_uploader :icon, ImageUploader
 end

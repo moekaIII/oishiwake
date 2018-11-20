@@ -10,20 +10,24 @@
   </head>
 
   <body>
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <%= link_to 'home', dishes_path %>
       <%= link_to '募集', new_dish_path %>
-      <%= link_to "Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+      <%= link_to "Profile", page_path(current_user.id) %>
+      <%= link_to "Logout",  destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
     <% end %>
 
 
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
+    <% if notice %>
+      <p class="alert alert-notice"><%= notice %></p>
     <% end %>
+    <% if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

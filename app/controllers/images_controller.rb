@@ -7,11 +7,12 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
     @image.user_id = current_user.id
     if @image.save
-      redirect_to user_path(current_user.id), notice: "写真を追加しました！"
+      redirect_to page_path(current_user.id), notice: "写真を追加しました！"
     else
       render 'new'
     end
   end
+
 
 
   private

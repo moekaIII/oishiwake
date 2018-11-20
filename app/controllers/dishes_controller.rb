@@ -24,7 +24,7 @@ class DishesController < ApplicationController
   end
 
   def show
-    @favorite = current_user.favorites.find_by(dish_id: @dish.id)
+    #@favorite = current_user.favorites.find_by(dish_id: @dish.id)
   end
 
   def edit

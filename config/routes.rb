@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users, controllers: {
+        registrations: 'users/registrations'
+  }
+  devise_scope :user do
+    get 'user', to: 'users/registrations#index'
+  end
+
+  root 'dishes#index'
   resources :dishes do
     collection do
       post :confirm
     end
   end
+  resources :pages, only: [:show, :destroy]
   resources :images, only: [:new, :create]
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
   resources :favorites, only: [:create, :destroy]
   resources :conversations do
     resources :messages
   end
-  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end

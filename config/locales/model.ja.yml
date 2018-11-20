@@ -1,0 +1,25 @@
+ja:
+  activerecord:
+    models:
+      blog: "ブログ"
+      user: "ユーザー"
+    attributes:
+      dish:
+        name: "料理名"
+        time: "募集期間"
+        tip: "チップ"
+        comment: "コメント"
+      contact:
+        name: "名前"
+        email: "メールアドレス"
+        content: "内容"
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        place: "お住まいの地域（例：茨城県 かすみがうら市）"
+        icon: "アイコン画像"
+        about_me: "自己紹介"
+        current_password: "現在のパスワード"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "ログインを記憶"

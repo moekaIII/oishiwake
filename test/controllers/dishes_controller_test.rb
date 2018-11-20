@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class DishesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get dishes_index_url
+  test "should get inde" do
+    get dishes_inde_url
     assert_response :success
   end
 

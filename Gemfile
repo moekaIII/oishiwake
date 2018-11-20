@@ -66,3 +66,7 @@ gem 'bcrypt', '3.1.11'
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rename'
+gem 'devise'
+gem 'rails_admin', '~> 1.3'
+gem 'cancancan', '~> 2.0'

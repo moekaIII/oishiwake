@@ -6,10 +6,10 @@
   <%= form.hidden_field :tip %>
   <%= form.hidden_field :comment %>
 
-  <p>料理名<%= @dish.name %></p>
-  <p>募集期間<%= @dish.time %></p>
-  <p>チップ<%= @dish.tip %></p>
-  <p>コメント<%= @dish.comment %></p>
+  <p>料理名：<%= @dish.name %></p>
+  <p>募集期間：<%= @dish.time %></p>
+  <p>チップ：<%= @dish.tip %></p>
+  <p>コメント：<%= @dish.comment %></p>
   <%= form.submit "投稿" %>
 <% end %>
 
