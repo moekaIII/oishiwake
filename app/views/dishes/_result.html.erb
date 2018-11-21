@@ -1,4 +1,4 @@
-<% @dishes.each do |dish| %>
+<% @dish.each do |dish| %>
   <ul>
     <li><%= image_tag dish.user.icon.url %><%= link_to dish.user.name, page_path(dish.user_id) %></li>
     <li><h3><%= dish.name %></h3></li>
