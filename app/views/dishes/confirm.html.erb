@@ -2,11 +2,13 @@
 
 <%= form_with(model: @dish, url: dishes_path, local: true) do |form| %>
   <%= form.hidden_field :name %>
+  <%= form.hidden_field :transaction_place %>
   <%= form.hidden_field :time %>
   <%= form.hidden_field :tip %>
   <%= form.hidden_field :comment %>
 
   <p>料理名：<%= @dish.name %></p>
+  <p>地域：<%= @dish.transaction_place %></p>
   <p>募集期間：<%= @dish.time %></p>
   <p>チップ：<%= @dish.tip %></p>
   <p>コメント：<%= @dish.comment %></p>
@@ -15,6 +17,7 @@
 
 <%= form_with(model: @dish, url: new_dish_path, local: true, method: 'get') do |form| %>
   <%= form.hidden_field :name %>
+  <%= form.hidden_field :transaction_place %>
   <%= form.hidden_field :time %>
   <%= form.hidden_field :tip %>
   <%= form.hidden_field :comment %>

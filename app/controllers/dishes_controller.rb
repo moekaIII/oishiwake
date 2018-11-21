@@ -3,6 +3,13 @@ class DishesController < ApplicationController
   before_action :user_check, only:[:edit]
   def index
     @dishes = Dish.all
+    @q = Dish.ransack(params[:q])
+    @dish = @q.result(distinct: true)
+  end
+
+  def search
+    @q = Dish.search(search_params)
+    @dish = @q.result(distinct: true)
   end
 
   def new
@@ -24,7 +31,7 @@ class DishesController < ApplicationController
   end
 
   def show
-    #@favorite = current_user.favorites.find_by(dish_id: @dish.id)
+    @favorite = current_user.favorites.find_by(dish_id: @dish.id)
   end
 
   def edit
@@ -52,7 +59,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:name, :time, :tip, :comment)
+    params.require(:dish).permit(:name, :time, :tip, :comment, :transaction_place)
   end
 
   def set_dish
@@ -66,5 +73,9 @@ class DishesController < ApplicationController
     else
       redirect_to dishes_path
     end
+  end
+
+  def search_params
+    params.require(:q).permit!
   end
 end

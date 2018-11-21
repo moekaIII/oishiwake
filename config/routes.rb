@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/tops', to: 'tops#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
         registrations: 'users/registrations'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   resources :dishes do
     collection do
       post :confirm
+      get :search
     end
   end
   resources :pages, only: [:show, :destroy]

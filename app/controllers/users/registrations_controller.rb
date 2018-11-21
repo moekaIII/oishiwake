@@ -31,7 +31,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    end
 
    def index
-     @users = User.all
+     @user = User.all
    end
 
   # GET /resource/cancel
