@@ -14,6 +14,7 @@
     <hedder class="header">
       <ul class="header-ul">
         <% if user_signed_in? %>
+          <li class="header-li"><div class="link"><%= link_to 'Top', root_path %></div></li>      
           <li class="header-li"><div class="link"><%= link_to 'home', dishes_path %></div></li>
           <li class="header-li"><div class="link"><%= link_to '募集', new_dish_path %></div></li>
           <li class="header-li"><div class="link"><%= link_to "Profile", page_path(current_user.id) %></div></li>
