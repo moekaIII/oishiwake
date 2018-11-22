@@ -1,19 +1,21 @@
-<% if current_user.try(:admin?) %>
-  <h1>投稿一覧（管理者ページ）</h1>
-<% else %>
-  <h1>投稿一覧</h1>
-<% end %>
+<div class="home">
+  <% if current_user.try(:admin?) %>
+    <h1>投稿一覧（管理者ページ）</h1>
+  <% else %>
+    <h1>投稿一覧</h1>
+  <% end %>
 
-<%= search_form_for @q do |f| %>
-  <div class="form-group">
-    <%= f.label :transaction_place_cont, "お住まいの地域" %>
-    <%= f.search_field :transaction_place_cont, class: "form-control" %>
-  </div>
-  <div class="actions"><%= f.submit "🔍" %></div>
-<% end %>
-<% if @dishes.any? %>
-  <%= render 'result' %>
-<% end %>
-<% if @dishes.nil? %>
-  <p>お探しの地域の投稿はありませんでした(´༎ຶོρ༎ຶོ`)</p>
-<% end %>
+  <%= search_form_for @q do |f| %>
+    <div class="form-group">
+      <%= f.label :transaction_place_cont, "地域で検索" %>
+      <%= f.search_field :transaction_place_cont, class: "form-control" %>
+      <span class="loupe"><%= f.submit "🔍" %></span>
+    </div>
+  <% end %>
+  <% if @dishes.any? %>
+    <%= render 'result' %>
+  <% end %>
+  <% if @dishes.nil? %>
+    <p>お探しの地域の投稿はありませんでした(´༎ຶོρ༎ຶོ`)</p>
+  <% end %>
+</div>

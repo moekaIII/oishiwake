@@ -1,8 +1,32 @@
-<h1>OSUSOWAKE</h1>
+<section class="main-header">
+  <% if current_user.try(:admin?) %>
+    <h1>OSUSOWAKE 管理者ページ</h1>
+  <% else %>
+    <h1>OSUSOWAKE</h1>
+  <% end %>
+</section>
 
-<div class="sign-buttun">
-<%= link_to "Sign up", new_user_session_path %>
+<div class="top">
+  "『美味しい』を誰でも簡単にお届け"
+
+<div class="how">
+使い方<br>
+
+たったの３ステップ！！<br>
+＜食べる側＞<br>
+①　取りにいける地域の投稿を検索 🔍<br>
+②　食べたい投稿の挙手ボタンをポチッ<br>
+③　投稿者とのチャットで日時と受け取り場所を決定<br>
+＜作る側＞<br>
+①　買い物までの期間に食べてくれる人を募集<br>
+②　食べてくれる人が決まったら、人数分多く買い物<br>
+③　作って渡しに行く👟<br>
 </div>
-<div class="sign-buttun">
-<%= link_to "Log in", new_user_registration_path %>
+
+  <div class="sign-buttun">
+  <button type="button" class="btn btn-outline-warning"><%= link_to "Sign up", new_user_session_path %></button>
+  </div>
+  <div class="sign-buttun">
+  <%= link_to "Log in", new_user_registration_path %>
+</div>
 </div>

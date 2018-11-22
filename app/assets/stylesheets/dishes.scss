@@ -1,3 +1,162 @@
-// Place all the styles related to the dishes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+  width: 100%;
+  background-color: #FFBA84;
+  height: 54px;
+}
+
+.header-ul {
+  width: 100%;
+  height: 54px;
+  margin: 0 auto;
+  list-style: none;
+  background-color:#FFBA84;
+}
+
+.header-li {
+  background-color:#FFBA84;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  float: left;
+  text-align: left;
+}
+
+.main-header {
+  padding: 20%;
+  width:100%;
+  background-size: cover;
+  background-image: url("main-header.jpg");
+  background-attachment: fixed;
+}
+
+.main-header img {
+  display: block;
+  margin: 0　auto;
+  width: 25%;
+  padding-top: 15%;
+}
+
+.link {
+  color: white;
+}
+
+.main-header {
+  padding: 10% 15% 40%;
+  width:100%;
+  color: white;
+  font-family: Comic Sans MS;
+  background-size: cover;
+  background-image: url("main-header.jpg");
+  background-attachment: fixed;
+}
+
+.main-header h1 {
+  margin-top: 20%;
+  font-size: 60px;
+}
+
+.main-header img {
+  display: block;
+  margin: 0 auto;
+}
+
+.list {
+  list-style :none;
+}
+
+.user-name {
+  text-align: left;
+  padding: 3px;
+}
+
+
+.container {
+  padding: 40px 30px 300px
+}
+
+.table th {
+  text-align: center;
+}
+
+.contacts {
+  padding: 40px 30px 300px
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  width: 100%;
+  background-color:#FFBA84;
+  padding: 20px 0 10px 0;
+  color: white;
+  font-size: 15px;
+  bottom: 0;
+  margin-top: auto;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  text-align: center;
+}
+
+
+.box {
+  padding: 0.5em 1em;
+  margin: 20px 20%;
+  font-weight: bold;
+  border: solid 1px ;
+  border-radius: 10px;
+}
+
+.image img {
+  width: 80%;
+  height: 80%;
+}
+
+.error_li {
+  list-style: none;
+}
+
+#user_img img {
+  height: 70px;
+  width: 70px;
+  float: left;
+  padding: 7px;
+}
+
+.form-group {
+  width: 300px;
+  margin-left: 40%
+}
+
+.loupe {
+  text-align: right;
+}
+
+.show-list {
+  margin: 3%;
+  line-height: 40px
+}
+
+
+.dish_form {
+  margin: 20px;
+}
+
+.home {
+  height: 100%
+}
+
+h1 {
+  margin: auto;
+}

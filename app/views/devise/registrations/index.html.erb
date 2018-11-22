@@ -1,10 +1,10 @@
 <h2>ユーザー</h2>
 <% @users.each do |user| %>
   <% if user.id != current_user.id %>
-    <li>
+    <li class="user-list">
       <div class="item">
-        <%= link_to user.name, page_path(user.id) %>
-        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post%>
+        <button type="button" class="btn btn-outline-info"><%= link_to user.name, page_path(user.id) %></button>
+        <button type="button" class="btn btn-outline-warning"><%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post%></button>
       </div>
     </li>
   <% end %>

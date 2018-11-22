@@ -6,6 +6,7 @@ ja:
     attributes:
       dish:
         name: "料理名"
+        place: " 大まかな取引希望場所"
         time: "募集期間"
         tip: "チップ"
         comment: "コメント"

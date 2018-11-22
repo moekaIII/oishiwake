@@ -1,3 +1,20 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.image-list {
+  margin: auto;
+}
+
+
+
+.dish-image img {
+  width: 50%;
+  height: 50%;
+  display: inline;
+  margin: 3px;
+}
+#show-user_img img {
+  height: 70px;
+  width: 70px;
+  padding: 7px;
+}

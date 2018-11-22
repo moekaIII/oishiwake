@@ -1,19 +1,20 @@
 
-<h1><%= image_tag @user.icon.url %><%= @user.name %>さんのページ</h1>
-<p>メールアドレス : <%= @user.email %></p>
+<h1><div id="show-user_img"><%= image_tag @user.icon.url %></div><%= @user.name %>さんのページ</h1>
 <p>地域：<%= @user.place %></p>
 <p>自己紹介：<%= @user.about_me %></p>
 <% if @user == current_user %>
   <%= link_to '編集', edit_user_registration_path(@user.id) %>
 <% end %>
-<p><%= link_to 'メッセージ', user_path %></p>
+<p><button type="button" class="btn btn-outline-warning"><%= link_to 'メッセージ', user_path %></button></p>
 <p>過去の料理一覧</p>
-<p>
-  <% if @user == current_user %>
+<p class="image-list">
     <% @images.each do |img| %>
-      <li><%= image_tag img.image.url %></li>
-      <%= link_to '削除', page_path(img.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
+      <div class="dish-image"><%= image_tag img.image.url %></div>
+      <% if @user == current_user %>
+        <%= link_to '削除', page_path(img.id), method: :delete, data: {confirm: '本当に削除しますか？'} %>
+      <% end %>
     <% end %>
-    <%= link_to '追加', new_image_path %>
-  <% end %>
+    <% if @user == current_user %>
+      <%= link_to '追加', new_image_path %>
+    <% end %>
 </p>
