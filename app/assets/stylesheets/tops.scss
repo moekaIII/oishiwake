@@ -4,4 +4,127 @@
 
 .top {
   line-height: 50px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.square_btn{
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1.4em;
+    text-decoration: none;
+    background: yellow;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 5px orange;/*ボタン色より暗めに*/
+    border-right: solid 5px orange;/*ボタン色より暗めに*/
+}
+
+.square_btn:before{
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-width: 0 6px 6px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #FFF;
+}
+
+.square_btn:after{
+    content: " ";
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border-width: 0px 9px 9px 0px;
+    border-style: solid;
+    border-color: #FFF;
+    border-bottom-color: transparent;
+}
+
+.square_btn:active{ /*ボタンを押したとき*/
+    border:none;
+    -ms-transform: translate(6px,6px);
+    -webkit-transform: translate(6px,6px);
+    transform: translate(6px,6px);
+}
+
+.square_btn:active:after,.square_btn:active:before {
+    content: none;/*ボタンを押すと線が消える*/
+}
+
+.consept p {
+  font-family: arial unicode ms;
+  font-size: 200%;
+  color: #F05E1C;
+  margin: 100px
+}
+
+.container {
+  padding: 0;
+}
+
+.col-sm-6 {
+  list-style: none;
+  text-align: left;
+}
+
+.col-sm-6 #cook {
+  padding: 20px;
+  background-color: #FFE4B5;
+  margin: 1px;
+  font-size: 19px;
+}
+
+.col-sm-6 #eater {
+  padding: 20px;
+  background-color: #B0E0E6;
+  font-size: 19px;
+}
+
+.col-sm-6 h4 {
+  text-align: center;
+}
+
+.how {
+  font-family: Book Antiqua;
+  font-size: 150%;
+  margin-bottom: 2%;
+}
+
+.how span {
+  font-family: cursive;
+  color: #F05E1C;
+  font-size: 250%;
+}
+
+#cook span {
+  font-family: cursive;
+  color: #F05E1C;
+  font-size: 200%;
+}
+
+#eater span {
+  font-family: cursive;
+  color: #F05E1C;
+  font-size: 200%;
+}
+
+.sign-button {
+   margin-top: 10%;
+   margin-bottom: 15%;
+}
+
+.ex {
+  margin-bottom: 2%;
+
+}
+
+.ex span {
+  font-family: Comic Sans MS;
+  color: #F05E1C;
+  font-size: 300%;
 }

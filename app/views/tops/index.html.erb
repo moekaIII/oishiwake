@@ -14,26 +14,79 @@
 <% end %>
 
 <div class="top">
-  "『美味しい』を誰でも簡単にお届け"
-
-<div class="how">
-使い方<br>
-
-たったの３ステップ！！<br>
-＜食べる側＞<br>
-①　取りにいける地域の投稿を検索 🔍<br>
-②　食べたい投稿の挙手ボタンをポチッ<br>
-③　投稿者とのチャットで日時と受け取り場所を決定<br>
-＜作る側＞<br>
-①　買い物までの期間に食べてくれる人を募集<br>
-②　食べてくれる人が決まったら、人数分多く買い物<br>
-③　作って渡しに行く👟<br>
-</div>
-
-  <div class="sign-buttun">
-  <button type="button" class="btn btn-outline-warning"><%= link_to "Sign up", new_user_session_path %></button>
+  <div class="consept">
+    <p>"『美味しい』を誰でも簡単にお届け"<p>
   </div>
-  <div class="sign-buttun">
-  <%= link_to "Log in", new_user_registration_path %>
+  <div class="container">
+    <div class="how">使い方はたったの<span>3</span>ステップ！！</div>
+      <ul class="row">
+        <li class="col-sm-6 col-md-6">
+          <div id="eater"><h4>＜食べる側＞</h4>
+            <span>1.</span>　取りにいける地域の投稿を検索 🔍<br>
+              <span>2.</span>　食べたい投稿の挙手ボタンをポチッ<br>
+            <span>3.</span>　投稿者とのチャットで日時と受け取り場所を決定<br>
+          </div>
+        </li>
+        <li class="col-sm-6 col-md-6">
+          <div id="cook"><h4>＜作る側＞</h4>
+            <span>1.</span>　買い物までの期間に食べてくれる人を募集<br>
+            <span>2.</span>　食べてくれる人が決まったら、人数分多く買い物<br>
+            <span>3.</span>　作って渡しに行く👟<br>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
+<div class="sign-button">
+  <button class="square_btn"><%= link_to "Sign up", new_user_registration_path %></button><br>
+  <%= link_to "Log in", new_user_session_path %>
+</div>
+
+<div class="container">
+  <div class="ex"><span>For Example</span></div>
+    <ul class="row">
+      <li class="col-sm-6 col-md-6">
+        <div id="eater"><h4>＜小川さん（大手金融会社）34才＞</h4>
+          <span>1.</span>　料理とかしてる暇ない<br>
+          <span>2.</span>　でも外食は飽きた<br>
+          <span>3.</span>　ご飯作ってくれる彼女もいない…<br>
+          <span>4.</span>（出会いもない…）<br>
+        </div>
+      </li>
+      <li class="col-sm-6 col-md-6">
+        <div id="cook"><h4>＜宇佐美さん（OL）24才＞</h4>
+          <span>1.</span>　料理が好き<br>
+          <span>2.</span>　作りすぎちゃう<br>
+          <span>3.</span>　誰かに食べて欲しい<br>
+          <span>4.</span>　将来の夢はお嫁さん♡<br>        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+    <ul class="row">
+      <li class="col-sm-6 col-md-6">
+        <div id="eater"><h4>＜細川さん（２児の母）39才＞</h4>
+          <span>1.</span>　子育てでいっぱいいっぱい<br>
+          <span>2.</span>　献立考えるのが大変<br>
+          <span>3.</span>　イヤイヤ期で、もう……以下略<br>
+          <span>4.</span>　でも子供にはちゃんとしたもの食べさせたい<br>
+        </div>
+      </li>
+      <li class="col-sm-6 col-md-6">
+        <div id="cook"><h4>＜岩瀬さん（年金生活）64才＞</h4>
+          <span>1.</span>　料理が好き<br>
+          <span>2.</span>　趣味が欲しい<br>
+          <span>3.</span>　世のお母さんたちを応援したい<br>
+          <span>4.</span>　若い人と話したい<br>
+        </div>
+      </li>
+    </ul>
+</div>
+
+<div class="sign-button">
+  <button class="square_btn"><%= link_to "Sign up", new_user_registration_path %></button><br>
+  <%= link_to "Log in", new_user_session_path %>
 </div>

@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  background-color: #FFBA84;
+  background-color: #f0bb8a;
   height: 54px;
 }
 
@@ -9,11 +9,11 @@
   height: 54px;
   margin: 0 auto;
   list-style: none;
-  background-color:#FFBA84;
+  background-color:#f0bb8a;
 }
 
 .header-li {
-  background-color:#FFBA84;
+  background-color:#f0bb8a;
   display: block;
   padding: 15px;
   text-decoration: none;
@@ -63,6 +63,10 @@
 
 .list {
   list-style :none;
+}
+
+.o-link {
+  color: white;
 }
 
 .user-name {
