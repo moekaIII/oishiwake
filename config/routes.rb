@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/tops', to: 'tops#index'
+  root "tops#index"
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
         registrations: 'users/registrations'
@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     get 'user', to: 'users/registrations#index'
   end
 
-  root 'dishes#index'
   resources :dishes do
     collection do
       post :confirm
