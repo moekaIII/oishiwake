@@ -5,6 +5,14 @@
     <h1>投稿一覧</h1>
   <% end %>
 
+  <% if notice %>
+    <p class="alert alert-notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-error"><%= alert %></p>
+  <% end %>
+
+
   <%= search_form_for @q do |f| %>
     <div class="form-group">
       <%= f.label :transaction_place_cont, "地域で検索" %>
