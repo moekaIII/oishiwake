@@ -9,7 +9,7 @@
 ........................................
 <h4>コメント</h4>
 <p><%= @dish.comment %></p>
-
+<div>
 <% unless @dish.user_id == current_user.id %>
   <% if @favorite.present? %>
     <button type="button" class="btn btn-outline-danger"><%= link_to 'キャンセル', favorite_path(id: @favorite.id), method: :delete %></button>
@@ -17,6 +17,7 @@
     <button type="button" class="btn btn-outline-danger"><%= link_to '挙手', favorites_path(dish_id: @dish.id), method: :post %></button>
   <% end %>
 <% end %>
+</div>
 <div>
 <% if @dish.user_id == current_user.id %>
   <button type="button" class="btn btn-outline-info"><%= link_to '編集', edit_dish_path(@dish.id) %></button>
