@@ -39,8 +39,13 @@
   </div>
 </div>
 <div class="sign-button">
-  <button class="square_btn"><%= link_to "Sign up", new_user_registration_path %></button><br>
-  <%= link_to "Log in", new_user_session_path %>
+  <% if user_signed_in? %>
+    <button class="square_btn"><%= link_to "さぁ、人生を豊かに！", new_dish_path %></button><br>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <button class="square_btn"><%= link_to "さぁ、人生を豊かに！", new_user_registration_path %></button><br>
+    <%= link_to "ログイン", new_user_session_path %>
+  <% end %>
 </div>
 
 <div class="container">
@@ -85,8 +90,12 @@
       </li>
     </ul>
 </div>
-
 <div class="sign-button">
-  <button class="square_btn"><%= link_to "Sign up", new_user_registration_path %></button><br>
-  <%= link_to "Log in", new_user_session_path %>
+  <% if user_signed_in? %>
+    <button class="square_btn"><%= link_to "さぁ、人生を豊かに！", new_dish_path %></button><br>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <button class="square_btn"><%= link_to "さぁ、人生を豊かに！", new_user_registration_path %></button><br>
+    <%= link_to "ログイン", new_user_session_path %>
+  <% end %>
 </div>

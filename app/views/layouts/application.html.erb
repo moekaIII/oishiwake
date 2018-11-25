@@ -19,7 +19,7 @@
           <li class="header-li"><div class="o-link"><%= link_to '募集', new_dish_path %></div></li>
           <li class="header-li"><div class="o-link"><%= link_to "プロフィール", page_path(current_user.id) %></div></li>
           <li class="header-li"><div class="o-link"><%= link_to "メッセージ", user_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to "ログアウト",  destroy_user_session_path, method: :delete %></div></li>
+          <li class="header-li"><div class="o-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div></li>
         <% else %>
           <li class="header-li"><div class="o-link"><%= link_to 'トップ', root_path %></div></li>
           <li class="header-li"><div class="o-link"><%= link_to "新規登録", new_user_registration_path %></div></li>
