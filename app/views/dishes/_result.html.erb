@@ -1,7 +1,12 @@
 <% @dish.each do |dish| %>
   <div class="box">
     <ul class="list">
-      <li><div id="user_img"><%= image_tag dish.user.icon.url %></div><div class="user-name"><%= link_to dish.user.name, page_path(dish.user_id) %></div></li>
+      <li><% if dish.user.icon.present? %>
+            <div id="user_img"><%= image_tag dish.user.icon.url %></div>
+          <% else %>
+            <div id="user_image"><% image_tag 'noimage.jpg' %></div>
+          <% end %>
+          <div class="user-name"><%= link_to dish.user.name, page_path(dish.user_id) %></div></li>
       <li><h3><%= dish.name %></h3></li>
       <li>地域：<%= dish.transaction_place %></li>
       <li>募集期間：<%= dish.time %>まで</li>

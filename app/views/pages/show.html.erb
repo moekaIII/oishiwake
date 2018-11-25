@@ -1,5 +1,12 @@
 
-<h1><div id="show-user_img"><%= image_tag @user.icon.url %></div><%= @user.name %>さんのページ</h1>
+<h1>
+  <% if @user.icon.present? %>
+    <div id="show-user_img"><%= image_tag @user.icon.url %></div>
+  <% else %>
+    <div id="show-user_img"><%= image_tag 'noimage.jpg' %>
+  <% end %>
+  <%= @user.name %>さんのページ
+</h1>
 <p>地域：<%= @user.place %></p>
 <p>自己紹介：<%= @user.about_me %></p>
 <% if @user == current_user %>
