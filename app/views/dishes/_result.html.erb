@@ -4,7 +4,7 @@
       <li><% if dish.user.icon.present? %>
             <div id="user_img"><%= image_tag dish.user.icon.url %></div>
           <% else %>
-            <div id="user_image"><% image_tag 'noimage.jpg' %></div>
+            <div id="user_img"><% image_tag 'noimage.jpg' %></div>
           <% end %>
           <div class="user-name"><%= link_to dish.user.name, page_path(dish.user_id) %></div></li>
       <li><h3><%= dish.name %></h3></li>
