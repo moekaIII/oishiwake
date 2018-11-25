@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   def create
     favorite = current_user.favorites.create(dish_id: params[:dish_id])
     RequestMailer.request_mail(@request).deliver
-    redirect_to dishes_path, notice:"#{favorite.dish.user.name}さんに料理を申し込みました！"
+    redirect_to dishes_path, notice:"#{favorite.dish.user.name}さんに料理を申し込みました！メッセージを待ちましょう"
   end
 
   def destroy
