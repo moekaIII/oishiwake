@@ -11,28 +11,23 @@
   <% end %>
 
   <div class="dish_form">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :placeholder=>'料理名' %>
   </div>
 
   <div class="dish_form">
-    <%= form.label :place %>
-    <%= form.text_field :transaction_place %>
+    <%= form.text_field :transaction_place, :placeholder=>'大まかな取引希望場所' %>
   </div>
 
   <div class="dish_form">
-    <%= form.label :time %>
-    <%= form.text_field :time %>まで
+    <%= form.text_field :time, :placeholder=>'募集期間' %>まで
   </div>
 
   <div class="dish_form">
-    <%= form.label :tip %>
-    <%= form.text_field :tip %>円〜
+    <%= form.text_field :tip, :placeholder=>'チップ' %>円〜
   </div>
 
   <div class="dish_form">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
+    <%= form.text_field :comment, :placeholder=>'コメント' %>
   </div>
 
   <%= form.submit %>
