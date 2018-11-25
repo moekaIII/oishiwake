@@ -34,9 +34,6 @@ class DishesController < ApplicationController
     @favorite = current_user.favorites.find_by(dish_id: @dish.id)
   end
 
-  def edit
-  end
-
   def update
     if @dish.update(dish_params)
       redirect_to dishes_path, notice: "投稿を編集しました！"
