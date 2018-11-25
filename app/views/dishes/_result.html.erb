@@ -9,7 +9,7 @@
           <div class="user-name"><%= link_to dish.user.name, page_path(dish.user_id) %></div></li>
       <li><h3><%= dish.name %></h3></li>
       <li>地域：<%= dish.transaction_place %></li>
-      <li>募集期間：<%= dish.time %>まで</li>
+      <li>募集期間：<%= dish.date %>まで</li>
       <li>チップ：<%= dish.tip %>円〜</li>
     </ul>
     <button type="button" class="btn btn-outline-warning"><%= link_to '詳細', dish_path(dish.id) %></button>
