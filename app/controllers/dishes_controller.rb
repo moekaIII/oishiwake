@@ -4,7 +4,7 @@ class DishesController < ApplicationController
   def index
     @dishes = Dish.where('date >= ?', Date.today)
     @q = Dish.ransack(params[:q])
-    @dish = @q.result(distinct: true).order(:date)
+    @dish = @q.result(distinct: true).where('date >= ?', Date.today).order(:date)
   end
 
   def search
