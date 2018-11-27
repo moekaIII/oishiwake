@@ -14,16 +14,16 @@
     <hedder class="header">
       <ul class="header-ul">
         <% if user_signed_in? %>
-          <li class="header-li"><div class="o-link"><%= link_to 'トップ', root_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to 'ホーム', dishes_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to '募集', new_dish_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to "プロフィール", page_path(current_user.id) %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to "メッセージ", user_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div></li>
+          <li class="header-li"><%= link_to 'トップ', root_path %></li>
+          <li class="header-li"><%= link_to 'ホーム', dishes_path %></li>
+          <li class="header-li"><%= link_to '募集', new_dish_path %></li>
+          <li class="header-li"><%= link_to "プロフィール", page_path(current_user.id) %></li>
+          <li class="header-li"><%= link_to "メッセージ", user_path %></li>
+          <li class="header-li"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li class="header-li"><div class="o-link"><%= link_to 'トップ', root_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to "新規登録", new_user_registration_path %></div></li>
-          <li class="header-li"><div class="o-link"><%= link_to "ログイン", new_user_session_path %></div></li>
+          <li class="header-li"><%= link_to 'トップ', root_path %></li>
+          <li class="header-li"><%= link_to "新規登録", new_user_registration_path %></li>
+          <li class="header-li"><%= link_to "ログイン", new_user_session_path %></li>
         <% end %>
       </ul>
     </hedder>
