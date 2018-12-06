@@ -170,3 +170,9 @@ h1 {
 #error_explanation li {
   list-style: none;
 }
+
+.required {
+  color: red;
+  margin: 3px;
+  vertical-align: top;
+}

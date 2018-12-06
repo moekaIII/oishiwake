@@ -42,7 +42,7 @@
   </div>
 
   <div class="edit-field">
-    <%= f.label :current_password %> <i>(変更には現在のパスワードが必要です)</i><br />
+    <span class="required">*</span><%= f.label :current_password %> <i>(変更には現在のパスワードが必要です)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 

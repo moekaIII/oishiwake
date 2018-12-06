@@ -11,23 +11,23 @@
   <% end %>
 
   <div class="dish_form">
-    <%= form.text_field :name, :placeholder=>'料理名' %>
+    <span class="required">*</span><%= form.text_field :name, :placeholder=>'料理名' %>
   </div>
 
   <div class="dish_form">
-    <%= form.text_field :transaction_place, :placeholder=>'大まかな取引希望場所' %>
+    <span class="required">*</span><%= form.text_field :transaction_place, :placeholder=>'大まかな取引希望場所' %>
   </div>
 
   <div class="dish_form">
-    <%= form.date_select :date, :placeholder=>'募集期間' %>まで
+    <span class="required">*</span><%= form.date_select :date, :placeholder=>'募集期間' %>まで
   </div>
 
   <div class="dish_form">
-    <%= form.text_field :tip, :placeholder=>'チップ' %>円〜
+    <span class="required">*</span><%= form.text_field :tip, :placeholder=>'チップ' %>円〜
   </div>
 
   <div class="dish_form">
-    <%= form.text_field :comment, :placeholder=>'コメント' %>
+    <%= form.text_area :comment, :placeholder=>'コメント' %>
   </div>
 
   <%= form.submit %>
