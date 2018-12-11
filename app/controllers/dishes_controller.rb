@@ -21,8 +21,7 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.new(dish_params)
-    @dish.user_id = current_user.id
+    @dish = current_user.dishes.build(dish_params)
     if @dish.save
       redirect_to dishes_path, notice: "投稿しました"
     else
