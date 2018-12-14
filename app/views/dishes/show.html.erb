@@ -1,35 +1,36 @@
-<p><div id="show-user_img">
+<p>
+  <div id="show-user_img">
     <% if @dish.user.icon.present? %>
       <%= image_tag @dish.user.icon.url %>
     <% else %>
       <% image_tag 'noimage.jpg' %>
     <% end %>
-    </div>
-    <%= link_to @dish.user.name, page_path(@dish.user_id) %>さんの投稿</p>
+  </div>
+  <%= link_to @dish.user.name, page_path(@dish.user_id) %>さんの投稿
+</p>
 <h1><%= @dish.name %></h1>
 ........................................
 <div class="show-list">
   <h5>地域：<%= @dish.transaction_place %></h5>
-  <h5>募集期間：<%= @dish.date.strftime("%Y年 %m月 %d日")  %>まで</h5>
+  <h5>募集期間：<%= @dish.date.strftime("%Y年 %m月 %d日") %>まで</h5>
   <h5>チップ：<%= @dish.tip %>円〜</h5>
 </div>
 ........................................
 <h4>コメント</h4>
 <p><%= @dish.comment %></p>
 <div>
-<% unless @dish.user_id == current_user.id %>
-  <% if @favorite.present? %>
-    <button type="button" class="btn btn-outline-danger"><%= link_to 'キャンセル', favorite_path(id: @favorite.id), method: :delete %></button>
-  <% else %>
-    <button type="button" class="btn btn-outline-danger"><%= link_to '挙手', favorites_path(dish_id: @dish.id), method: :post %></button>
+  <% unless @dish.user_id == current_user.id %>
+    <% if @favorite.present? %>
+      <button type="button" class="btn btn-outline-danger"><%= link_to 'キャンセル', favorite_path(id: @favorite.id), method: :delete %></button>
+    <% else %>
+      <button type="button" class="btn btn-outline-danger"><%= link_to '挙手', favorites_path(dish_id: @dish.id), method: :post %></button>
+    <% end %>
   <% end %>
-<% end %>
 </div>
 <div>
-<% if @dish.user_id == current_user.id %>
-  <button type="button" class="btn btn-outline-info"><%= link_to '編集', edit_dish_path(@dish.id) %></button>
-  <button type="button" class="btn btn-outline-info"><%= link_to '削除', dish_path(@dish.id), method: :delete, data: {confirm: '本当に削除しますか？'} %></button>
-<% end %>
-
-<button type="button" class="btn btn-outline-info"><%= link_to '戻る', dishes_path %></button>
+  <% if @dish.user_id == current_user.id %>
+    <button type="button" class="btn btn-outline-info"><%= link_to '編集', edit_dish_path(@dish.id) %></button>
+    <button type="button" class="btn btn-outline-info"><%= link_to '削除', dish_path(@dish.id), method: :delete, data: {confirm: '本当に削除しますか？'} %></button>
+  <% end %>
+  <button type="button" class="btn btn-outline-info"><%= link_to '戻る', dishes_path %></button>
 </div>
