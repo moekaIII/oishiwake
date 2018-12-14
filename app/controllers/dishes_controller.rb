@@ -1,6 +1,7 @@
 class DishesController < ApplicationController
   before_action :set_dish, only:[:show, :update, :destroy]
   before_action :user_check, only:[:edit]
+  
   def index
     @dishes = Dish.where('date >= ?', Date.today)
     @q = Dish.ransack(params[:q])
